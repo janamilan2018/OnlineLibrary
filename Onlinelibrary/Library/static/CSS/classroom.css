@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: #fff;
+}
+.header h1
+{
+    font-size: 2.5em;
+    text-align: center;
+    color: #111;
+}
+h1
+{
+    padding: 10px 0 10px 0;
+
+}
+h1 span
+{
+    color: #ff0157;
+}
+.subject
+{
+    padding: 0 20px 0 20px;
+}
+.course
+{
+    padding: 10px 0 20px 0;
+}
+.red
+{
+    padding: 0 0 90px 0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background:#ff0157;
+    background: linear-gradient(#f37da4,#fff);
+}
+.blue
+{
+    padding: 0 0 90px 0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background:#01b7ff;
+    background: linear-gradient(#01b7ff,#fff);
+}
+.green
+{
+    padding: 0 0 90px 0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background:#01ff9e;
+    background: linear-gradient(#01ff9e,#fff);
+}
+.grid-container 
+{
+    height: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 30px;
+    text-align: center;
+}
+.grid-container .grid-item
+{
+    padding: 15px 0 15px;
+    border-radius: 5px;
+    background: rgb(21, 236, 14);
+    /* background: url(../IMG/BG8.jpg); */
+    justify-content: center;
+    background-size: cover;
+}

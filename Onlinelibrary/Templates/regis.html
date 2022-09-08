@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './CSS/regis.css' %}">
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="form">
+                <h1>User Registration</h1>
+                {% if messages %}
+                {% for message in messages%}
+                <h3>{{message}}</h3>
+                {% endfor %}
+                {% endif %}
+                <form action="{% url 'regis' %}" method="post">
+                    {% csrf_token %}
+                    <div class="inputBx">
+                        <input type="text" placeholder="Full Name" name="name">
+                        <img src="{% static './IMG/user-solid.svg' %}">
+                    </div>
+                    <div class="inputBx">
+                        <input type="date" placeholder="Date of Birth" name="dob">
+                        <img src="{% static './IMG/calendar-solid.svg' %}">
+                    </div>
+                    <div class="inputBx">
+                        <input type="text" placeholder="Phone Number" name="phone">
+                        <img src="{% static './IMG/mobile.svg' %}">
+                    </div>
+                    <div class="inputBx">
+                        <input type="email" placeholder="E-mail" name="email">
+                        <img src="{% static './IMG/envelope-solid.svg' %}">
+                    </div>
+                    <div class="inputBx">
+                        <input type="password" placeholder="Pssword" name="pass">
+                        <img src="{% static './IMG/lock-solid.svg' %}">
+                    </div>
+                    <div class="inputBx">
+                        <input type="password" placeholder="Confirm Password" name="cpass">
+                        <img src="{% static './IMG/lock-solid.svg' %}">
+                    </div>
+                    <label class="remember"><input type="checkbox">Remember Me</label>
+                    <div class="inputBx">
+                        <input type="submit" value="Register">
+                    </div>
+                    <p>Have an <a href="{% url 'login'%}">Account</a></p>    
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

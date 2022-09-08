@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    padding: 10px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2e5572;
+}
+.header
+{
+    display: grid;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
+.header h1
+{
+    font-size: 2.5em;
+    font-weight: 800;
+}
+.header h1 span
+{
+    color: #ff0157;
+}
+.container
+{
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    border: 5px solid #fff;
+    grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+    grid-gap: 20px;
+}
+.container .card
+{
+    width: 100%;
+    background: #fff;
+    border: 5px solid rgb(170, 253, 103);
+    cursor: pointer;
+}
+.container .card .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.container .card .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+.container .card:hover .imgBx img
+{
+    transform: scale(1.5);
+}
+.container .card .content
+{
+    padding: 7px;
+}
+.container .card .content .bookName h3
+{
+    font-size: 18px;
+    font-weight: 700;
+}
+.container .card .content .bookName h4
+{
+    padding: 0 5px 5px 2px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.container .card a 
+{
+   color: #333;
+   text-decoration: none;
+}
+.container .card a:hover
+{
+    color: #1900ff;
+}
+.container .card .content .rating
+{
+    display: flex;
+}
+.container .card .content .rating img
+{
+    filter: invert(84%) sepia(85%) saturate(435%) hue-rotate(1deg) brightness(96%) contrast(93%);
+    width: 10px;
+    align-items: center;
+}

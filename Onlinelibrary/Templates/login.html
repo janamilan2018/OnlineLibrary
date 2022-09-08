@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './CSS/login.css' %}">
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="form">
+                <h1>User Log-In</h1>
+                {% if messages %}
+                {% for message in messages%}
+                <h3>{{message}}</h3>
+                {% endfor %}
+                {% endif %}
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="inputBx">
+                        <input type="text" placeholder="Email or Phone number" name="email">
+                        <img src="{% static './IMG/user-solid.svg' %}">
+                    </div>
+                    <div class="inputBx">
+                        <input type="password" placeholder="Password" name="pass">
+                        <img src="{% static './IMG/lock-solid.svg' %}">
+                    </div>
+                    <label class="remember"><input type="checkbox" name="rememberme">Remember Me</label>
+                    <div class="inputBx">
+                        <input type="submit" value="Login">
+                    </div>
+                    <p>Forget <a href="{% url 'forgetpass' %}">Password</a></p>
+                    <p>Create an <a href="{% url 'regis' %}">Account</a></p>    
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
